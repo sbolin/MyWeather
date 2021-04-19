@@ -70,7 +70,7 @@ class ForecastListViewModel: ObservableObject {
                     print(#function)
                     print("location found: \(lat) / \(lon)")
                     
-                    let weatherURL = "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=minutely,alerts&appid=fd938577e5e50f270dcb8457a8b1fbe1"
+                    let weatherURL = "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=minutely,alerts&appid=\(Secrets.apiKey)"
                     
                     self.apiService.getJSON(urlString: weatherURL, dateDecodingStrategy: .secondsSince1970) { (result: Result<Forecast, APIServiceCombine.APIError>) in
                         
@@ -112,5 +112,5 @@ class ForecastListViewModel: ObservableObject {
 
 // revised getJSON call for use with current, hourly, and daily weather forcast url
 /*
- apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=minutely,alerts&appid=fd938577e5e50f270dcb8457a8b1fbe1",
+ apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=minutely,alerts&appid=",
  */

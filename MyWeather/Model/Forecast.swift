@@ -111,4 +111,4 @@ struct Forecast: Decodable {
 
 
 
-// api call: https://api.openweathermap.org/data/2.5/onecall?lat=13.677636&lon=100.685491&exclude=minutely,alerts&appid=fd938577e5e50f270dcb8457a8b1fbe1
+// api call: https://api.openweathermap.org/data/2.5/onecall?lat=13.677636&lon=100.685491&exclude=minutely,alerts&appid=

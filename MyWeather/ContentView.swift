@@ -5,7 +5,6 @@
 //  Created by Scott Bolin on 3/8/21.
 //
 
-// Key: fd938577e5e50f270dcb8457a8b1fbe1
 // coordinates: 13.677636, 100.685491
 
 import SwiftUI
