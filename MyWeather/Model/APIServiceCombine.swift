@@ -25,7 +25,6 @@ class APIServiceCombine {
         }
         
         print(#function)
-        print("getting json for url: \(url)")
         
         let request = URLRequest(url: url)
         let decoder = JSONDecoder()
@@ -33,7 +32,7 @@ class APIServiceCombine {
         decoder.keyDecodingStrategy = keyDecodingStrategy
         
         URLSession.shared.dataTaskPublisher(for: request)
-            .map { $0.data }
+            .map(\.data)
             .decode(type: T.self, decoder: decoder)
             .receive(on: RunLoop.main) // receive on main thread before passing to UI
             .sink { taskCompletion in

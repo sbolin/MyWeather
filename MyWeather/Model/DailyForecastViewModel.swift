@@ -10,7 +10,6 @@ import Foundation
 struct DailyForecastViewModel {
     let dailyForecast: Forecast.Daily
     var system: Int
-    let formatter = Formatter()
 
     var day: String {
         return Formatter.dailyDateFormatter.string(from: dailyForecast.dt)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WeatherDailyListView: View {
 //    @StateObject var forecastListVM = ForecastListViewModel()
-    @ObservedObject var forecastListVM = ForecastListViewModel()
+    @ObservedObject var forecastListVM = ForecastViewModel()
     @ObservedObject var imageLoader = ImageLoader()
     
     private var columns: [GridItem] = [

@@ -1,5 +1,5 @@
 //
-//  ForecastListViewModel.swift
+//  ForecastViewModel.swift
 //  Weather
 //
 //  Created by Scott Bolin on 3/8/21.
@@ -9,7 +9,8 @@ import Foundation
 import CoreLocation
 import SwiftUI
 
-class ForecastListViewModel: ObservableObject {
+class ForecastViewModel: ObservableObject {
+    
     struct AppError: Identifiable {
         let id = UUID().uuidString
         let errorString: String
@@ -107,10 +108,3 @@ class ForecastListViewModel: ObservableObject {
         } // if/else location
     } // getWeatherForecast
 }
-
-
-
-// revised getJSON call for use with current, hourly, and daily weather forcast url
-/*
- apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=minutely,alerts&appid=",
- */

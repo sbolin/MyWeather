@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PickerView: View {
-    @StateObject var forecastListVM = ForecastListViewModel()
+    @StateObject var forecastListVM = ForecastViewModel()
     
     init() {
         //this changes the "thumb" that selects between items

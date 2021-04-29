@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationInputView: View {
-    @StateObject var forecastListVM = ForecastListViewModel()
+    @StateObject var forecastListVM = ForecastViewModel()
     
     var body: some View {
         HStack {
